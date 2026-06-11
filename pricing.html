@@ -26,121 +26,58 @@
   </nav>
 
   <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-24">
-    <div class="max-w-2xl mx-auto text-center mb-14">
-      <div class="text-emerald-400 text-sm font-semibold tracking-widest">PRICING</div>
-      <h1 class="font-display text-6xl font-semibold tracking-tighter mt-3">Simple pricing.<br>No hidden fees.</h1>
-      <p class="mt-4 text-xl text-zinc-400">Choose the plan that works best for you.</p>
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <div class="text-emerald-400 text-sm font-semibold tracking-widest">ONE-TIME PAYMENT</div>
+      <h1 class="font-display text-6xl font-semibold tracking-tighter mt-3">Pay once.<br>Own forever.</h1>
+      <p class="mt-4 text-xl text-zinc-400">Get full access to CLICKO with a single payment.</p>
     </div>
 
-    <!-- Pricing Toggle -->
-    <div class="flex justify-center mb-12">
-      <div class="inline-flex rounded-3xl border border-zinc-800 p-1 bg-zinc-900">
-        <button onclick="switchPlan('monthly')" id="btn-monthly"
-                class="px-8 py-2.5 text-sm font-medium rounded-3xl bg-white text-zinc-950 transition-all">Monthly</button>
-        <button onclick="switchPlan('yearly')" id="btn-yearly"
-                class="px-8 py-2.5 text-sm font-medium rounded-3xl text-zinc-400 hover:text-white transition-all">Yearly <span class="text-emerald-400 text-xs font-bold">Save 40%</span></button>
-      </div>
-    </div>
+    <div class="max-w-md mx-auto">
+      <div class="border border-emerald-500 rounded-3xl p-10 bg-zinc-900">
+        <div class="text-center">
+          <div class="text-6xl font-semibold">$10</div>
+          <div class="text-emerald-400 mt-1 text-lg">One-time payment</div>
+        </div>
 
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-      
-      <!-- Monthly Plan -->
-      <div id="card-monthly" class="border border-zinc-800 rounded-3xl p-9 bg-zinc-900">
-        <div>
-          <div class="font-semibold text-2xl">Monthly</div>
-          <div class="mt-1 text-zinc-400">Billed monthly</div>
-        </div>
-        
-        <div class="mt-8">
-          <div class="flex items-baseline">
-            <span class="text-6xl font-semibold">$9</span>
-            <span class="text-xl text-zinc-400 ml-1">/ month</span>
-          </div>
-        </div>
-        
-        <ul class="mt-9 space-y-3 text-sm">
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Unlimited elements &amp; rules</span></li>
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Scheduled starts</span></li>
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Profile management</span></li>
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Priority support</span></li>
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Unlimited max attempts</span></li>
+        <div class="my-8 border-t border-zinc-800"></div>
+
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-check text-emerald-400"></i> 
+            <span>Unlimited elements &amp; rules</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-check text-emerald-400"></i> 
+            <span>Scheduled automation</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-check text-emerald-400"></i> 
+            <span>Profile management</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-check text-emerald-400"></i> 
+            <span>Priority support</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-check text-emerald-400"></i> 
+            <span>Lifetime updates</span>
+          </li>
         </ul>
-        
-        <button onclick="subscribe('monthly')"
-                class="mt-9 w-full py-4 bg-white text-zinc-950 font-semibold rounded-3xl hover:bg-zinc-100 transition-all">
-          Start 14-day free trial
+
+        <button onclick="subscribe()"
+                class="mt-10 w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-3xl transition-all text-lg">
+          Pay $10 — Get Lifetime Access
         </button>
+
+        <p class="text-center text-xs text-zinc-500 mt-4">30-day money-back guarantee</p>
       </div>
-      
-      <!-- Yearly Plan -->
-      <div id="card-yearly" class="border border-emerald-500 rounded-3xl p-9 bg-zinc-900 relative">
-        <div class="absolute -top-3 right-8 bg-emerald-500 text-xs font-bold px-4 py-1 rounded-3xl">Most Popular</div>
-        
-        <div>
-          <div class="font-semibold text-2xl">Yearly</div>
-          <div class="mt-1 text-zinc-400">Billed yearly • Save $43</div>
-        </div>
-        
-        <div class="mt-8">
-          <div class="flex items-baseline">
-            <span class="text-6xl font-semibold">$65</span>
-            <span class="text-xl text-zinc-400 ml-1">/ year</span>
-          </div>
-          <div class="text-emerald-400 text-sm mt-1">$5.42/month</div>
-        </div>
-        
-        <ul class="mt-9 space-y-3 text-sm">
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Everything in Monthly</span></li>
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>2 months free</span></li>
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Early access to features</span></li>
-          <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Priority support</span></li>
-        </ul>
-        
-        <button onclick="subscribe('yearly')"
-                class="mt-9 w-full py-4 bg-emerald-500 text-white font-semibold rounded-3xl hover:bg-emerald-600 transition-all">
-          Start 14-day free trial
-        </button>
-      </div>
-    </div>
-    
-    <div class="text-center mt-12 text-sm text-zinc-400">
-      Cancel anytime • 30-day money-back guarantee
     </div>
   </div>
 
   <script>
-    function switchPlan(plan) {
-      const monthlyCard = document.getElementById('card-monthly');
-      const yearlyCard = document.getElementById('card-yearly');
-      const btnMonthly = document.getElementById('btn-monthly');
-      const btnYearly = document.getElementById('btn-yearly');
-      
-      if (plan === 'monthly') {
-        monthlyCard.classList.add('border-emerald-500');
-        yearlyCard.classList.remove('border-emerald-500');
-        btnMonthly.classList.add('bg-white', 'text-zinc-950');
-        btnYearly.classList.remove('bg-white', 'text-zinc-950');
-      } else {
-        yearlyCard.classList.add('border-emerald-500');
-        monthlyCard.classList.remove('border-emerald-500');
-        btnYearly.classList.add('bg-white', 'text-zinc-950');
-        btnMonthly.classList.remove('bg-white', 'text-zinc-950');
-      }
-    }
-    
-    function subscribe(plan) {
-      const message = plan === 'monthly' 
-        ? "Thanks! Monthly subscription checkout would open here (Paddle integration coming next)."
-        : "Thanks! Yearly subscription checkout would open here (Paddle integration coming next).";
-      alert(message);
-    }
-    
-    // Default to monthly selected
-    window.onload = () => {
-      document.getElementById('card-monthly').classList.add('border-emerald-500');
-      document.getElementById('btn-monthly').classList.add('bg-white', 'text-zinc-950');
+    function subscribe() {
+      alert("Thanks! This would open Paddle checkout for $10 one-time payment.\n\n(Paddle integration coming next)");
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a09f602eff4c4b55',t:'MTc4MTE2NzkwNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a09f768a4ce02490',t:'MTc4MTE2ODgyMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
