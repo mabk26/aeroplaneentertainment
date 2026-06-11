@@ -5,20 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing — CLICKO</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     body { font-family: 'Inter', system_ui, sans-serif; }
     .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200">
-  <!-- Navbar -->
   <nav class="border-b border-zinc-800">
     <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
       <div class="flex items-center gap-x-3">
-        <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center">
-          <i class="fa-solid fa-mouse-pointer text-white text-2xl"></i>
-        </div>
+        <img src="icon48.png" alt="CLICKO" class="w-9 h-9 rounded-2xl">
         <a href="index.html" class="font-display text-3xl font-semibold tracking-tighter">CLICKO</a>
       </div>
       <a href="index.html" class="text-sm hover:text-white transition-colors">← Back to home</a>
@@ -42,43 +38,41 @@
         <div class="my-8 border-t border-zinc-800"></div>
 
         <ul class="space-y-4 text-sm">
-          <li class="flex items-center gap-3">
-            <i class="fa-solid fa-check text-emerald-400"></i> 
-            <span>Unlimited elements &amp; rules</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="fa-solid fa-check text-emerald-400"></i> 
-            <span>Scheduled automation</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="fa-solid fa-check text-emerald-400"></i> 
-            <span>Profile management</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="fa-solid fa-check text-emerald-400"></i> 
-            <span>Priority support</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i class="fa-solid fa-check text-emerald-400"></i> 
-            <span>Lifetime updates</span>
-          </li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Unlimited elements &amp; rules</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Scheduled automation</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Profile management</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Priority support</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Lifetime updates</li>
         </ul>
 
-        <button onclick="subscribe()"
+        <button onclick="openPaddleCheckout()"
                 class="mt-10 w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-3xl transition-all text-lg">
           Pay $10 — Get Lifetime Access
         </button>
 
         <p class="text-center text-xs text-zinc-500 mt-4">30-day money-back guarantee</p>
-        <p class="text-center text-xs text-zinc-500 mt-2">Contact: <a href="/cdn-cgi/l/email-protection#94f5f1e6fbe4f8f5faf1f1fae0f1e6e0f5fdfaf9f1fae0d4f3f9f5fdf8baf7fbf9" class="text-emerald-400"><span class="__cf_email__" data-cfemail="e687839489968a878883838892839492878f888b838892a6818b878f8ac885898b">[email&#160;protected]</span></a></p>
+        <p class="text-center text-xs text-zinc-500 mt-1">Contact: <a href="mailto:aeroplaneentertainment@gmail.com" class="text-emerald-400">aeroplaneentertainment@gmail.com</a></p>
       </div>
     </div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    function subscribe() {
-      alert("Thanks! This would open Paddle checkout for $10 one-time payment.\n\n(Paddle integration coming next)");
+  <!-- Paddle.js -->
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script>
+    Paddle.Initialize({
+      token: 'live_afe83141f4c07dffa5f6667e68c'
+    });
+
+    function openPaddleCheckout() {
+      Paddle.Checkout.open({
+        items: [
+          {
+            priceId: 'pri_01kttzrsh8vb73hsgr3pxxjspk',
+            quantity: 1
+          }
+        ]
+      });
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a09fa9b519ba5b2e',t:'MTc4MTE3MDkxNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
