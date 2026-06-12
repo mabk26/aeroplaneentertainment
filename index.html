@@ -1,97 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLICKO — Visual Browser Automation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLICKO — Intelligent Auto Clicker for Chrome</title>
+  <meta name="description" content="CLICKO is a universal intelligent auto-clicker Chrome extension with visual element picking, rules, variables, schedules, iframe and Shadow DOM support.">
   <style>
-    body { font-family: 'Inter', system_ui, sans-serif; }
-    .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+    :root{--bg:#070b16;--panel:#111827;--panel2:#172033;--text:#f1f5f9;--muted:#94a3b8;--line:#263449;--cyan:#38bdf8;--blue:#818cf8;--green:#34d399;--red:#f87171;--shadow:0 24px 80px rgba(0,0,0,.45)}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 20% -10%,rgba(56,189,248,.24),transparent 34%),radial-gradient(circle at 85% 8%,rgba(129,140,248,.20),transparent 32%),var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 22px}.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em}.brand img{width:34px;height:34px}.links{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 18px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#07111f;box-shadow:0 10px 28px rgba(56,189,248,.25)}.btn.secondary{background:rgba(148,163,184,.08);color:var(--text);box-shadow:none;border:1px solid var(--line)}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:64px 0 74px}.eyebrow{display:inline-flex;border:1px solid rgba(56,189,248,.3);background:rgba(56,189,248,.08);color:var(--cyan);font-weight:800;border-radius:999px;padding:7px 11px;font-size:12px}.hero h1{font-size:58px;line-height:.94;margin:18px 0 18px;letter-spacing:-.07em}.grad{background:linear-gradient(90deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;line-height:1.75;color:#cbd5e1;margin:0 0 28px}.cta{display:flex;gap:12px;flex-wrap:wrap}.note{margin-top:16px;color:var(--muted);font-size:13px}.mock{background:linear-gradient(180deg,rgba(23,32,51,.9),rgba(10,15,28,.92));border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:18px;position:relative;overflow:hidden}.mock:before{content:"";position:absolute;inset:-120px -80px auto auto;width:260px;height:260px;background:rgba(56,189,248,.18);filter:blur(50px);border-radius:50%}.panel{position:relative;background:#0f172a;border:1px solid #334155;border-radius:18px;overflow:hidden}.panel header{padding:15px;border-bottom:1px solid #334155;display:flex;justify-content:space-between}.tabs{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid #334155}.tabs span{font-size:11px;color:var(--muted);padding:10px 4px;text-align:center}.tabs span:first-child{color:var(--cyan);border-bottom:2px solid var(--cyan)}.cards{padding:14px;display:grid;gap:10px}.card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:13px}.mini{height:8px;border-radius:8px;background:#334155;margin-top:8px}.mini.w60{width:60%}.mini.w85{width:85%}.status{display:flex;gap:8px;padding:14px}.status b{flex:1;text-align:center;border-radius:12px;padding:12px;background:linear-gradient(135deg,var(--green),#10b981);color:#07111f}.status b:last-child{background:linear-gradient(135deg,var(--red),#ef4444)}
+    .section{padding:74px 0;border-top:1px solid rgba(148,163,184,.12)}.section h2{text-align:center;font-size:36px;letter-spacing:-.04em;margin:0 0 14px}.section p.center{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 34px;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{background:rgba(17,24,39,.78);border:1px solid var(--line);border-radius:18px;padding:22px}.ico{font-size:28px}.feature h3{margin:14px 0 8px}.feature p{color:var(--muted);line-height:1.65;margin:0}.pricebox{max-width:820px;margin:26px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}.plan{background:rgba(17,24,39,.82);border:1px solid var(--line);border-radius:22px;padding:28px}.plan.pro{border-color:rgba(56,189,248,.7);box-shadow:0 0 32px rgba(56,189,248,.12)}.price{font-size:44px;font-weight:950;letter-spacing:-.05em}.price small{font-size:15px;color:var(--muted);font-weight:600}.plan ul{padding:0;margin:22px 0;list-style:none}.plan li{padding:7px 0;color:#cbd5e1}.plan li:before{content:"✓";color:var(--green);font-weight:900;margin-right:8px}.footer{border-top:1px solid rgba(148,163,184,.12);padding:28px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:860px){.hero,.grid,.pricebox{grid-template-columns:1fr}.hero h1{font-size:44px}.links a:not(.btn){display:none}}
   </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200">
-  <!-- Navbar -->
-  <nav class="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg sticky top-0 z-50">
-    <div class="max-w-screen-2xl mx-auto px-8">
-      <div class="flex items-center justify-between py-5">
-        <div class="flex items-center gap-x-3">
-          <img src="icon48.png" alt="CLICKO" class="w-9 h-9 rounded-2xl">
-          <span class="font-display text-3xl font-semibold tracking-tighter">CLICKO</span>
-        </div>
-        
-        <div class="flex items-center gap-x-3">
-          <a href="pricing.html" class="px-5 py-2.5 text-sm font-medium border border-zinc-700 hover:bg-zinc-900 rounded-3xl transition-all">Pricing</a>
-          <a href="pricing.html" class="px-6 py-2.5 bg-white text-zinc-950 text-sm font-semibold rounded-3xl hover:bg-zinc-100 transition-all">Get Started</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <div class="max-w-screen-2xl mx-auto px-8 pt-20 pb-24 text-center">
-    <div class="max-w-3xl mx-auto">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-3xl bg-zinc-900 border border-zinc-800 text-sm mb-6">
-        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-        <span class="text-emerald-400 font-medium">One-time payment • $10</span>
-      </div>
-      
-      <h1 class="font-display text-7xl font-semibold tracking-tighter leading-none">
-        Automate any website.<br>
-        Without writing code.
-      </h1>
-      
-      <p class="mt-6 text-xl text-zinc-400 max-w-lg mx-auto">
-        Visually pick elements and build powerful automation rules. 
-        Works on any website.
-      </p>
-      
-      <div class="mt-10">
-        <a href="pricing.html" 
-           class="inline-flex items-center gap-x-3 px-10 py-5 bg-white text-zinc-950 font-semibold text-xl rounded-3xl hover:bg-zinc-100 transition-all">
-          Get CLICKO — $10 One Time
-        </a>
-      </div>
-    </div>
+<body>
+  <div class="wrap">
+    <nav class="nav"><a class="brand" href="index.html"><img src="icon48.png" alt="CLICKO"> CLICKO</a><div class="links"><a href="pricing.html">Pricing</a><a href="terms-of-service.html">Terms</a><a href="privacy-policy.html">Privacy</a><a href="refund-policy.html">Refunds</a><a class="btn" href="pricing.html">Get Pro</a></div></nav>
+    <section class="hero">
+      <div><span class="eyebrow">Chrome Extension · Manifest V3</span><h1>Automate clicks, forms, and workflows <span class="grad">on any website.</span></h1><p class="lead">CLICKO combines a visual element picker with a smart rule engine, variables, retry logic, schedules, Shadow DOM search, and iframe-aware automation.</p><div class="cta"><a class="btn" href="pricing.html">Upgrade for $10 lifetime</a><a class="btn secondary" href="#features">Explore features</a></div><div class="note">Free plan included. Pro unlocks unlimited rules, profiles, schedules, and attempts.</div></div>
+      <div class="mock" aria-label="CLICKO interface preview"><div class="panel"><header><b class="grad">CLICKO</b><span style="font-size:11px;background:#334155;color:#94a3b8;padding:3px 8px;border-radius:6px">FREE</span></header><div class="tabs"><span>Elements</span><span>Rules</span><span>Run</span><span>Vars</span><span>Settings</span></div><div class="cards"><div class="card"><b>Submit Button</b><div class="mini w85"></div><div class="mini w60"></div></div><div class="card"><b>If error detected → click Retry</b><div class="mini w85"></div></div></div><div class="status"><b>▶ START</b><b>■ STOP</b></div></div></div>
+    </section>
   </div>
-
-  <!-- Features -->
-  <div class="max-w-screen-2xl mx-auto px-8 py-20 border-t border-zinc-800">
-    <div class="max-w-2xl mx-auto text-center mb-14">
-      <h2 class="font-display text-5xl font-semibold tracking-tighter">Powerful features</h2>
-    </div>
-    
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="border border-zinc-800 rounded-3xl p-8">
-        <i class="fa-solid fa-mouse-pointer text-3xl text-emerald-400"></i>
-        <h3 class="mt-5 text-xl font-semibold">Visual Element Picker</h3>
-        <p class="mt-2 text-zinc-400">Point and click to select any button or input on any website.</p>
-      </div>
-      <div class="border border-zinc-800 rounded-3xl p-8">
-        <i class="fa-solid fa-robot text-3xl text-emerald-400"></i>
-        <h3 class="mt-5 text-xl font-semibold">Smart Rule Engine</h3>
-        <p class="mt-2 text-zinc-400">Build automation with conditions, success checks, and retry logic.</p>
-      </div>
-      <div class="border border-zinc-800 rounded-3xl p-8">
-        <i class="fa-solid fa-sync text-3xl text-emerald-400"></i>
-        <h3 class="mt-5 text-xl font-semibold">Self-Healing Selectors</h3>
-        <p class="mt-2 text-zinc-400">Automatically fixes broken selectors when websites update.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="border-t border-zinc-800 py-8 text-sm text-zinc-400">
-    <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-y-3">
-      <div>© 2026 CLICKO</div>
-      <div class="flex gap-x-6">
-        <a href="privacy-policy.html" class="hover:text-white">Privacy</a>
-        <a href="terms-of-service.html" class="hover:text-white">Terms</a>
-        <a href="refund-policy.html" class="hover:text-white">Refunds</a>
-        <a href="/cdn-cgi/l/email-protection#650400170a1509040b00000b11001711040c0b08000b11250208040c094b060a08" class="hover:text-white">Contact</a>
-      </div>
-    </div>
-  </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a09fefddbd4aa41c',t:'MTc4MTE3Mzc5MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <section class="section" id="features"><div class="wrap"><h2>Built for real-world pages</h2><p class="center">From ordinary forms to complex apps with iframes and Shadow DOM, CLICKO is designed to find targets reliably and keep automation understandable.</p><div class="grid"><div class="feature"><div class="ico">🎯</div><h3>Visual picker</h3><p>Point and click to save elements, with visible selection, Shadow DOM traversal, and a cancel bar.</p></div><div class="feature"><div class="ico">🧠</div><h3>Smart rules</h3><p>Build conditional workflows with if/else branches, retries, success checks, waits, notifications, and typing.</p></div><div class="feature"><div class="ico">🧩</div><h3>Iframe aware</h3><p>Same-origin iframe search plus background relay support for cross-origin frames injected by the extension.</p></div><div class="feature"><div class="ico">🔁</div><h3>Self healing</h3><p>Selector fallback uses CSS, XPath, text, and deep DOM search to recover when pages change.</p></div><div class="feature"><div class="ico">📦</div><h3>Profiles</h3><p>Save, export, import, and share automation profiles so repeated work is reusable.</p></div><div class="feature"><div class="ico">⏰</div><h3>Schedules</h3><p>Start automations at a chosen time with local Chrome alarms and clear countdown status.</p></div></div></div></section>
+  <section class="section"><div class="wrap"><h2>Simple pricing</h2><p class="center">Start free. Upgrade once for lifetime Pro.</p><div class="pricebox"><div class="plan"><h3>Free</h3><div class="price">$0 <small>forever</small></div><ul><li>5 elements</li><li>5 rules</li><li>50 attempts</li><li>Element picker</li></ul></div><div class="plan pro"><h3>Pro Lifetime</h3><div class="price">$10 <small>one-time</small></div><ul><li>Unlimited elements and rules</li><li>Unlimited attempts</li><li>Schedules and profiles</li><li>Variables, extraction, branching</li></ul><a class="btn" style="width:100%" href="pricing.html">Upgrade Now</a></div></div></div></section>
+  <div class="wrap"><footer class="footer"><span>© 2026 CLICKO · Aeroplane Entertainment</span><span><a href="terms-of-service.html">Terms</a> · <a href="privacy-policy.html">Privacy</a> · <a href="refund-policy.html">Refunds</a></span></footer></div>
+</body>
 </html>
