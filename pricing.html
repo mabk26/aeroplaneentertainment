@@ -1,77 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing — CLICKO</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLICKO Pricing — $10 Lifetime Pro</title>
   <style>
-    body { font-family: 'Inter', system_ui, sans-serif; }
-    .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+    :root{--bg:#070b16;--panel:#111827;--panel2:#172033;--text:#f1f5f9;--muted:#94a3b8;--line:#263449;--cyan:#38bdf8;--blue:#818cf8;--green:#34d399;--red:#f87171}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 50% -10%,rgba(56,189,248,.22),transparent 36%),#070b16;color:var(--text)}a{text-decoration:none;color:inherit}.wrap{max-width:980px;margin:auto;padding:0 22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.brand img{width:34px}.link{color:var(--muted)}.hero{text-align:center;padding:48px 0 34px}.hero h1{font-size:46px;letter-spacing:-.06em;margin:10px 0}.hero p{color:var(--muted);font-size:17px;line-height:1.7}.emailbox{display:inline-flex;margin-top:12px;border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);color:#bae6fd;border-radius:999px;padding:8px 12px;font-size:13px}.plans{display:grid;grid-template-columns:1fr 1.08fr;gap:22px;margin:28px 0 54px}.plan{background:rgba(17,24,39,.84);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 22px 70px rgba(0,0,0,.34)}.plan.pro{border-color:rgba(56,189,248,.75);position:relative;overflow:hidden}.plan.pro:before{content:"BEST VALUE";position:absolute;top:18px;right:-36px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;font-size:11px;font-weight:900;letter-spacing:.08em;padding:7px 42px;transform:rotate(35deg)}.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#334155;color:#cbd5e1;font-size:11px;font-weight:900}.badge.pro{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f}.price{font-size:52px;font-weight:950;letter-spacing:-.07em;margin:16px 0 2px}.price small{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:0}.desc{color:var(--muted);margin:0 0 22px}.features{list-style:none;padding:0;margin:22px 0}.features li{padding:8px 0;color:#cbd5e1;display:flex;gap:9px}.features li:before{content:"✓";color:var(--green);font-weight:900}.features .off{color:#64748b;text-decoration:line-through}.features .off:before{content:"×";color:#64748b}.btn{display:flex;width:100%;justify-content:center;align-items:center;border:0;border-radius:14px;padding:15px 18px;font-weight:900;font-size:15px;cursor:pointer;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;box-shadow:0 12px 32px rgba(56,189,248,.25)}.btn.disabled{background:#334155;color:#94a3b8;box-shadow:none;cursor:default}.hint{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}.faq{padding:20px 0 70px}.faq h2{text-align:center}.item{background:rgba(17,24,39,.72);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0}.item b{display:block;margin-bottom:8px}.item p{color:var(--muted);line-height:1.65;margin:0}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:#111827;border:1px solid #334155;color:#fff;padding:14px 18px;border-radius:14px;box-shadow:0 18px 60px rgba(0,0,0,.45);transition:.25s;max-width:90%;text-align:center}.toast.show{transform:translate(-50%,0)}footer{border-top:1px solid rgba(148,163,184,.12);padding:26px 0;color:var(--muted);font-size:13px;text-align:center}@media(max-width:760px){.plans{grid-template-columns:1fr}.hero h1{font-size:38px}}
   </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200">
-  <nav class="border-b border-zinc-800">
-    <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
-      <div class="flex items-center gap-x-3">
-        <img src="icon48.png" alt="CLICKO" class="w-9 h-9 rounded-2xl">
-        <a href="index.html" class="font-display text-3xl font-semibold tracking-tighter">CLICKO</a>
-      </div>
-      <a href="index.html" class="text-sm hover:text-white transition-colors">← Back to home</a>
-    </div>
-  </nav>
-
-  <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-24">
-    <div class="max-w-2xl mx-auto text-center mb-12">
-      <div class="text-emerald-400 text-sm font-semibold tracking-widest">ONE-TIME PAYMENT</div>
-      <h1 class="font-display text-6xl font-semibold tracking-tighter mt-3">Pay once.<br>Own forever.</h1>
-      <p class="mt-4 text-xl text-zinc-400">Get full access to CLICKO with a single payment.</p>
-    </div>
-
-    <div class="max-w-md mx-auto">
-      <div class="border border-emerald-500 rounded-3xl p-10 bg-zinc-900">
-        <div class="text-center">
-          <div class="text-6xl font-semibold">$10</div>
-          <div class="text-emerald-400 mt-1 text-lg">One-time payment</div>
-        </div>
-
-        <div class="my-8 border-t border-zinc-800"></div>
-
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Unlimited elements &amp; rules</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Scheduled automation</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Profile management</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Priority support</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Lifetime updates</li>
-        </ul>
-
-        <button onclick="openPaddleCheckout()"
-                class="mt-10 w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-3xl transition-all text-lg">
-          Pay $10 — Get Lifetime Access
-        </button>
-
-        <p class="text-center text-xs text-zinc-500 mt-4">30-day money-back guarantee</p>
-        <p class="text-center text-xs text-zinc-500 mt-1">Contact: <a href="/cdn-cgi/l/email-protection#9afbffe8f5eaf6fbf4fffff4eeffe8eefbf3f4f7fff4eedafdf7fbf3f6b4f9f5f7" class="text-emerald-400"><span class="__cf_email__" data-cfemail="f29397809d829e939c97979c86978086939b9c9f979c86b2959f939b9edc919d9f">[email&#160;protected]</span></a></p>
-      </div>
-    </div>
-  </div>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<body>
+  <div class="wrap"><nav class="nav"><a class="brand" href="index.html"><img src="icon48.png" alt="CLICKO"> CLICKO</a><div style="display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px"><a href="index.html">Home</a><a href="terms-of-service.html">Terms</a><a href="privacy-policy.html">Privacy</a><a href="refund-policy.html">Refunds</a></div></nav>
+    <section class="hero"><span class="badge pro">ONE-TIME LIFETIME LICENSE</span><h1>Upgrade to CLICKO Pro</h1><p>Unlock unlimited automation for a single payment. No monthly subscription.</p><div id="linked-email" class="emailbox" style="display:none"></div></section>
+    <div class="plans"><div class="plan"><span class="badge">FREE</span><div class="price">$0 <small>forever</small></div><p class="desc">Basic automation to get started.</p><ul class="features"><li>5 picked elements</li><li>5 rules</li><li>50 max attempts</li><li>Visual element picker</li><li class="off">Schedules</li><li class="off">Profiles and exports</li></ul><button class="btn disabled">Current Plan</button></div><div class="plan pro"><span class="badge pro">PRO</span><div class="price">$10 <small>one-time</small></div><p class="desc">Lifetime access to all premium features.</p><ul class="features"><li>Unlimited elements and rules</li><li>Unlimited attempts</li><li>Scheduled starts</li><li>Profile save/import/export</li><li>Variables and data extraction</li><li>Conditional branching</li><li>Priority support</li></ul><button id="checkout-btn" class="btn">Upgrade Now →</button><div class="hint">Secure checkout by Paddle. License is linked to your signed-in Google email.</div></div></div>
+    <section class="faq"><h2>FAQ</h2><div class="item"><b>How does activation work?</b><p>Sign in to the extension with Google, purchase here with the same email, then click “Refresh License” in the extension profile menu.</p></div><div class="item"><b>Is it really lifetime?</b><p>Yes. The Pro license is a one-time purchase and does not expire unless the payment is refunded or reversed.</p></div><div class="item"><b>Can I use it on multiple devices?</b><p>Yes. Sign in with the same Google account and refresh the license.</p></div><div class="item"><b>Where is my automation data stored?</b><p>Your elements, rules, profiles, and variables are stored locally in Chrome storage.</p></div></section>
+  </div><footer>© 2026 CLICKO · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-service.html">Terms</a> · <a href="refund-policy.html">Refund Policy</a></footer><div class="toast" id="toast"></div>
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script>
-    Paddle.Initialize({
-      token: 'live_afe83141f4c07dffa5f6667e68c'
+    const PADDLE_CLIENT_TOKEN = 'REPLACE_WITH_FULL_PADDLE_CLIENT_TOKEN';
+    const PADDLE_PRICE_ID = 'pri_01kttzrsh8vb73hsgr3pxxjspk';
+    const params = new URLSearchParams(location.search);
+    const email = params.get('email') || '';
+    const emailEl = document.getElementById('linked-email');
+    if (email) { emailEl.style.display = 'inline-flex'; emailEl.textContent = 'License will be linked to: ' + email; }
+    function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),4500); }
+    function paddleReady(){ return window.Paddle && !PADDLE_CLIENT_TOKEN.startsWith('REPLACE_'); }
+    if (window.Paddle && !PADDLE_CLIENT_TOKEN.startsWith('REPLACE_')) { Paddle.Environment.set('production'); Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN }); }
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      if (!paddleReady()) { toast('Paddle client token is not configured yet. Add your full live token in pricing.html.'); return; }
+      Paddle.Checkout.open({ items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }], customer: email ? { email } : undefined, customData: { email }, settings: { displayMode: 'overlay', theme: 'dark' } });
     });
-
-    function openPaddleCheckout() {
-      Paddle.Checkout.open({
-        items: [
-          {
-            priceId: 'pri_01kttzrsh8vb73hsgr3pxxjspk',
-            quantity: 1
-          }
-        ]
-      });
-    }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a09fee91c9fa34e9',t:'MTc4MTE3MzczNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
