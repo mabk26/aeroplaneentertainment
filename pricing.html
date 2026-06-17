@@ -3,64 +3,115 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" type="image/png" href="icon48.png">
-  <title>CLICKO Pricing — $10 Lifetime Pro</title>
+  <title>CLICKO Pricing — Basic · Pro · Ultra</title>
   <style>
-    :root{--bg:#070b16;--panel:#111827;--panel2:#172033;--text:#f1f5f9;--muted:#94a3b8;--line:#263449;--cyan:#38bdf8;--blue:#818cf8;--green:#34d399;--red:#f87171}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 50% -10%,rgba(56,189,248,.22),transparent 36%),#070b16;color:var(--text)}a{text-decoration:none;color:inherit}.wrap{max-width:980px;margin:auto;padding:0 22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.brand img{width:34px}.link{color:var(--muted)}.hero{text-align:center;padding:48px 0 34px}.hero h1{font-size:46px;letter-spacing:-.06em;margin:10px 0}.hero p{color:var(--muted);font-size:17px;line-height:1.7}.emailbox{display:inline-flex;margin-top:12px;border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);color:#bae6fd;border-radius:999px;padding:8px 12px;font-size:13px}.plans{display:grid;grid-template-columns:1fr 1.08fr;gap:22px;margin:28px 0 54px}.plan{background:rgba(17,24,39,.84);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 22px 70px rgba(0,0,0,.34)}.plan.pro{border-color:rgba(56,189,248,.75);position:relative;overflow:hidden}.plan.pro:before{content:"BEST VALUE";position:absolute;top:18px;right:-36px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;font-size:11px;font-weight:900;letter-spacing:.08em;padding:7px 42px;transform:rotate(35deg)}.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#334155;color:#cbd5e1;font-size:11px;font-weight:900}.badge.pro{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f}.price{font-size:52px;font-weight:950;letter-spacing:-.07em;margin:16px 0 2px}.price small{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:0}.desc{color:var(--muted);margin:0 0 22px}.features{list-style:none;padding:0;margin:22px 0}.features li{padding:8px 0;color:#cbd5e1;display:flex;gap:9px}.features li:before{content:"✓";color:var(--green);font-weight:900}.features .off{color:#64748b;text-decoration:line-through}.features .off:before{content:"×";color:#64748b}.btn{display:flex;width:100%;justify-content:center;align-items:center;border:0;border-radius:14px;padding:15px 18px;font-weight:900;font-size:15px;cursor:pointer;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;box-shadow:0 12px 32px rgba(56,189,248,.25)}.btn.disabled{background:#334155;color:#94a3b8;box-shadow:none;cursor:default}.hint{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}.faq{padding:20px 0 70px}.faq h2{text-align:center}.item{background:rgba(17,24,39,.72);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0}.item b{display:block;margin-bottom:8px}.item p{color:var(--muted);line-height:1.65;margin:0}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:#111827;border:1px solid #334155;color:#fff;padding:14px 18px;border-radius:14px;box-shadow:0 18px 60px rgba(0,0,0,.45);transition:.25s;max-width:90%;text-align:center}.toast.show{transform:translate(-50%,0)}footer{border-top:1px solid rgba(148,163,184,.12);padding:26px 0;color:var(--muted);font-size:13px;text-align:center}@media(max-width:760px){.plans{grid-template-columns:1fr}.hero h1{font-size:38px}}
+    :root{--bg:#070b16;--panel:#111827;--panel2:#172033;--text:#f1f5f9;--muted:#94a3b8;--line:#263449;--cyan:#38bdf8;--blue:#818cf8;--green:#34d399;--red:#f87171}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 50% -10%,rgba(56,189,248,.22),transparent 36%),#070b16;color:var(--text)}a{text-decoration:none;color:inherit}.wrap{max-width:1080px;margin:auto;padding:0 22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.nav .links{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px}.hero{text-align:center;padding:44px 0 28px}.hero h1{font-size:44px;letter-spacing:-.06em;margin:12px 0}.hero p{color:var(--muted);font-size:17px;line-height:1.7;max-width:620px;margin:0 auto}.emailbox{display:inline-flex;margin-top:12px;border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);color:#bae6fd;border-radius:999px;padding:8px 12px;font-size:13px}.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#334155;color:#cbd5e1;font-size:11px;font-weight:900;letter-spacing:.04em}.badge.pro{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f}
+    .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0 50px}.plan{background:rgba(17,24,39,.84);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 18px 60px rgba(0,0,0,.32);display:flex;flex-direction:column}.plan.pro{border-color:rgba(56,189,248,.75);position:relative}.plan.pro:before{content:"POPULAR";position:absolute;top:16px;right:-34px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;font-size:10px;font-weight:900;letter-spacing:.08em;padding:6px 40px;transform:rotate(35deg)}.plan h3{margin:0 0 2px;font-size:16px}.price{font-size:40px;font-weight:950;letter-spacing:-.05em;margin:12px 0 2px}.price small{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:0}.desc{color:var(--muted);font-size:13px;margin:0 0 14px}.features{list-style:none;padding:0;margin:12px 0 18px}.features li{padding:6px 0;color:#cbd5e1;display:flex;gap:9px;font-size:13px}.features li:before{content:"✓";color:var(--green);font-weight:900}.features .off{color:#64748b;text-decoration:line-through}.features .off:before{content:"×";color:#64748b}.credit-note{font-size:12px;color:var(--cyan);font-weight:700;margin:0 0 14px}.btn{display:flex;width:100%;justify-content:center;align-items:center;border:0;border-radius:14px;padding:13px 16px;font-weight:900;font-size:14px;cursor:pointer;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;box-shadow:0 10px 28px rgba(56,189,248,.22);margin-top:auto}.btn.disabled{background:#334155;color:#94a3b8;box-shadow:none;cursor:default}.btn.outline{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}.hint{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5}.faq{padding:18px 0 64px}.faq h2{text-align:center}.item{background:rgba(17,24,39,.72);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0}.item b{display:block;margin-bottom:8px}.item p{color:var(--muted);line-height:1.65;margin:0}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:#111827;border:1px solid #334155;color:#fff;padding:14px 18px;border-radius:14px;box-shadow:0 18px 60px rgba(0,0,0,.45);transition:.25s;max-width:90%;text-align:center}.toast.show{transform:translate(-50%,0)}footer{border-top:1px solid rgba(148,163,184,.12);padding:26px 0;color:var(--muted);font-size:13px;text-align:center}@media(max-width:980px){.plans{grid-template-columns:1fr 1fr}}@media(max-width:560px){.plans{grid-template-columns:1fr}.hero h1{font-size:34px}}
   </style>
 </head>
 <body>
-  <div class="wrap"><nav class="nav"><a class="brand" href="index.html"><img src="icon48.png" alt="CLICKO"> CLICKO</a><div style="display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px"><a href="index.html">Home</a><a href="terms-of-service.html">Terms</a><a href="privacy-policy.html">Privacy</a><a href="refund-policy.html">Refunds</a></div></nav>
-    <section class="hero"><span class="badge pro">ONE-TIME LIFETIME LICENSE</span><h1>Upgrade to CLICKO Pro</h1><p>Unlock unlimited automation for a single payment. No monthly subscription.</p><div id="linked-email" class="emailbox" style="display:none"></div></section>
-    <div class="plans"><div class="plan"><span class="badge">FREE</span><div class="price">$0 <small>forever</small></div><p class="desc">Basic automation to get started.</p><ul class="features"><li>5 picked elements</li><li>5 rules</li><li>50 max attempts</li><li>Visual element picker</li><li class="off">Schedules</li><li class="off">Profiles and exports</li></ul><button class="btn disabled">Current Plan</button></div><div class="plan pro"><span class="badge pro">PRO</span><div class="price">$10 <small>one-time</small></div><p class="desc">Lifetime access to all premium features.</p><ul class="features"><li>Unlimited elements and rules</li><li>Unlimited attempts</li><li>Scheduled starts</li><li>Profile save/import/export</li><li>Variables and data extraction</li><li>Conditional branching</li><li>Priority support</li></ul><button id="checkout-btn" class="btn">Upgrade Now →</button><div class="hint">Secure checkout by Lemon Squeezy. License is linked to your signed-in Google email.</div></div></div>
-    <section class="faq"><h2>FAQ</h2><div class="item"><b>How does activation work?</b><p>Sign in to the extension with Google, purchase here with the same email, then click “Refresh License” in the extension profile menu.</p></div><div class="item"><b>Is it really lifetime?</b><p>Yes. The Pro license is a one-time purchase and does not expire unless the payment is refunded or reversed.</p></div><div class="item"><b>Can I use it on multiple devices?</b><p>Yes. Sign in with the same Google account and refresh the license.</p></div><div class="item"><b>Where is my automation data stored?</b><p>Your elements, rules, profiles, and variables are stored locally in Chrome storage.</p></div></section>
-  </div><footer>© 2026 CLICKO · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-service.html">Terms</a> · <a href="refund-policy.html">Refund Policy</a></footer><div class="toast" id="toast"></div>
+  <div class="wrap">
+    <nav class="nav"><a class="brand" href="index.html">CLICKO</a><div class="links"><a href="index.html">Home</a><a href="terms-of-service.html">Terms</a><a href="privacy-policy.html">Privacy</a><a href="refund-policy.html">Refunds</a></div></nav>
+    <section class="hero"><span class="badge pro">MONTHLY PLANS · CREDITS NEVER EXPIRE</span><h1>Power your automation with credits</h1><p>AI runs on CLICKO Cloud — no API key needed. Each plan gives a monthly pool of credits billed at real usage + a small margin. Unused credits never expire.</p><div id="linked-email" class="emailbox" style="display:none"></div></section>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Free</h3><div class="price">$0 <small>forever</small></div>
+        <p class="desc">Try CLICKO with starter credits.</p>
+        <ul class="features"><li>500 starter AI credits</li><li>5 elements &amp; rules</li><li>Visual element picker</li><li>Basic scheduler</li><li class="off">Advanced scheduler</li><li class="off">Cloud sync &amp; profiles</li></ul>
+        <button class="btn disabled">Current Plan</button>
+      </div>
+
+      <div class="plan">
+        <h3>Basic</h3><div class="price">$12 <small>/month</small></div>
+        <p class="desc">For light, regular automation.</p>
+        <div class="credit-note">12,000 credits / month</div>
+        <ul class="features"><li>Monthly credit refill</li><li>Unlimited elements &amp; rules</li><li>Advanced scheduler</li><li>Cloud sync &amp; profiles</li><li>Variables &amp; branching</li></ul>
+        <button class="btn outline" data-tier="basic">Choose Basic</button>
+      </div>
+
+      <div class="plan pro">
+        <h3>Pro</h3><div class="price">$24 <small>/month</small></div>
+        <p class="desc">Best value for most users.</p>
+        <div class="credit-note">30,000 credits / month</div>
+        <ul class="features"><li>Everything in Basic</li><li>2.5× more monthly credits</li><li>Priority model routing</li><li>Share codes</li></ul>
+        <button class="btn" data-tier="pro">Choose Pro</button>
+      </div>
+
+      <div class="plan">
+        <h3>Ultra</h3><div class="price">$49 <small>/month</small></div>
+        <p class="desc">Heavy, daily automation.</p>
+        <div class="credit-note">75,000 credits / month</div>
+        <ul class="features"><li>Everything in Pro</li><li>2.5× more monthly credits</li><li>Highest priority</li><li>Priority support</li></ul>
+        <button class="btn outline" data-tier="ultra">Choose Ultra</button>
+      </div>
+    </div>
+    <p class="hint">Credits are spent per AI action at real token cost + 25%. They never expire and refill each month. Secure checkout by Lemon Squeezy.</p>
+
+    <section class="faq"><h2>FAQ</h2>
+      <div class="item"><b>How do credits work?</b><p>1 credit ≈ $0.001 of AI usage. Each Engine step or AI scan costs credits based on the actual tokens used × 1.25 (a 25% margin). A typical Engine step costs about 10 credits.</p></div>
+      <div class="item"><b>Do unused credits carry over?</b><p>Yes — credits never expire. A new month simply refills your pool on top of whatever is left.</p></div>
+      <div class="item"><b>How does activation work?</b><p>Sign in to the extension with Google, subscribe here with the same email, then click "Refresh License" in the extension profile menu.</p></div>
+      <div class="item"><b>Can I use it on multiple devices?</b><p>Yes. Sign in with the same Google account and refresh the license.</p></div>
+    </section>
+  </div>
+  <footer>© 2026 CLICKO · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-service.html">Terms</a> · <a href="refund-policy.html">Refund Policy</a></footer>
+  <div class="toast" id="toast"></div>
 
   <!-- Lemon Squeezy overlay checkout -->
   <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
   <script>
-    // Your hosted checkout link (Store → product → Share / "Buy now" link).
-    const LS_CHECKOUT_URL = 'https://aeroplaneentertainment.lemonsqueezy.com/checkout/buy/cd99046d-3beb-470e-a207-a885f8337a8a';
+    // Per-tier Lemon Squeezy subscription checkout URLs. Create one subscription
+    // product per tier and paste each "buy" link here. Also map each variant_id
+    // → tier on the server via the PLAN_VARIANTS env var so the webhook grants
+    // the right credit pool.
+    const LS_CHECKOUT_URLS = {
+      basic: 'https://aeroplaneentertainment.com/checkout/buy/4c17bef7-d37a-47b4-8baa-9f6cde84de10',
+      pro:   'https://aeroplaneentertainment.com/checkout/buy/757097a9-71ca-4077-97a8-705e7e7dc6c3',
+      ultra: 'https://aeroplaneentertainment.com/checkout/buy/fdc657e4-9f66-4b93-84da-3e1d07b0d349'
+    };
 
-    // Email passed from the extension as ?email=<google login>
     const params = new URLSearchParams(location.search);
     const email = (params.get('email') || '').trim();
     const userId = (params.get('user_id') || '').trim();
+    const initialTier = (params.get('tier') || '').trim();
 
     const emailEl = document.getElementById('linked-email');
     if (email) { emailEl.style.display = 'inline-flex'; emailEl.textContent = 'License will be linked to: ' + email; }
 
     function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),4500); }
 
-    // Build a checkout URL that pre-fills the email AND passes it (plus user id)
-    // as custom data so the webhook can link the purchase to the account:
-    //   checkout[email]            → pre-fills the email field
-    //   checkout[custom][email]    → arrives at webhook as meta.custom_data.email
-    function buildCheckoutUrl(overlay){
-      let url = LS_CHECKOUT_URL;
+    function buildCheckoutUrl(tier, overlay){
+      let url = LS_CHECKOUT_URLS[tier] || LS_CHECKOUT_URLS.pro || '';
+      if (!url || url.includes('REPLACE_WITH')) { toast('Checkout link not configured for ' + tier + ' yet.'); return null; }
       const q = [];
-      if (overlay) q.push('embed=1');               // open as overlay (with lemon.js)
-      q.push('media=0');                             // hide product media for a tighter modal
-      if (email) {
-        q.push('checkout[email]=' + encodeURIComponent(email));
-        q.push('checkout[custom][email]=' + encodeURIComponent(email));
-      }
+      if (overlay) q.push('embed=1');
+      q.push('media=0');
+      if (email) { q.push('checkout[email]=' + encodeURIComponent(email)); q.push('checkout[custom][email]=' + encodeURIComponent(email)); }
       if (userId) q.push('checkout[custom][user_id]=' + encodeURIComponent(userId));
+      q.push('checkout[custom][tier]=' + encodeURIComponent(tier));
       return url + (url.includes('?') ? '&' : '?') + q.join('&');
     }
 
-    document.getElementById('checkout-btn').addEventListener('click', () => {
-      if (LS_CHECKOUT_URL.includes('REPLACE_WITH')) { toast('Checkout link not configured yet.'); return; }
-      // Prefer the Lemon.js overlay; fall back to a normal redirect if it didn't load.
-      if (window.LemonSqueezy && window.createLemonSqueezy) {
-        try { window.createLemonSqueezy(); } catch(e){}
-      }
+    function startCheckout(tier){
+      if (window.LemonSqueezy && window.createLemonSqueezy) { try { window.createLemonSqueezy(); } catch(e){} }
+      const url = buildCheckoutUrl(tier, true);
+      if (!url) return;
       if (window.LemonSqueezy && window.LemonSqueezy.Url && window.LemonSqueezy.Url.Open) {
-        window.LemonSqueezy.Url.Open(buildCheckoutUrl(true));
+        window.LemonSqueezy.Url.Open(url);
       } else {
-        // Overlay script not ready — open the hosted checkout directly.
-        window.location.href = buildCheckoutUrl(false);
+        window.location.href = buildCheckoutUrl(tier, false) || url;
       }
+    }
+
+    document.querySelectorAll('button[data-tier]').forEach(btn => {
+      btn.addEventListener('click', () => startCheckout(btn.dataset.tier));
     });
+
+    // If the extension opened this page with ?tier=pro, kick off that checkout.
+    if (initialTier && LS_CHECKOUT_URLS[initialTier]) {
+      setTimeout(() => startCheckout(initialTier), 400);
+    }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0b9115c2af9b7f7',t:'MTc4MTQzNzMwNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
