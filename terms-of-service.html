@@ -1,11 +1,90 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" href="icon48.png"><title>CLICKO Terms of Service</title><style>body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#070b16;color:#f1f5f9;line-height:1.7}.wrap{max-width:860px;margin:auto;padding:32px 22px}a{color:#38bdf8}h1{font-size:38px;letter-spacing:-.04em}.card{background:#111827;border:1px solid #263449;border-radius:18px;padding:26px}p,li{color:#cbd5e1}.muted{color:#94a3b8}h2{margin-top:28px}</style></head><body><div class="wrap"><p><a href="index.html">← Back to CLICKO</a></p><h1>Terms of Service</h1><p class="muted">Effective date: June 12, 2026</p><div class="card"><p>These Terms of Service constitute a legally binding agreement made between you and Aeroplane Entertainment concerning your access to and use of the CLICKO extension.</p><h2>License</h2><p>CLICKO is sold as a monthly subscription (Basic, Pro, or Ultra tiers) for the Google email used during purchase. Each plan grants a monthly pool of AI credits that unlock Pro features for personal or business use by that account. Subscriptions renew automatically until cancelled.</p><h2>Acceptable use</h2><p>You are responsible for how you use automation. Do not use CLICKO to violate website terms, laws, security controls, or third-party rights. CLICKO should not be used to bypass CAPTCHA or anti-abuse systems.</p><h2>No guarantee</h2><p>Websites change frequently. While CLICKO includes selector fallback and smart retries, automation may require updates when a target page changes.</p><h2>Payments</h2><p>Payments are processed by Lemon Squeezy. License activation depends on receiving a successful payment webhook and matching the purchase email. Subscriptions renew monthly until cancelled.</p><h2>Limitation of liability</h2><p>CLICKO is provided “as is” without warranties. To the maximum extent permitted by law, liability is limited to the amount paid for the license.</p><h2>Contact</h2><p>Email: <a href="mailto:support@aeroplaneentertainment.com">support@aeroplaneentertainment.com</a></p></div></div></body></html>
-```
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/png" href="https://aeroplaneentertainment.com/icon48.png">
+  <title>CLICKO Terms of Service</title>
+  <meta name="description" content="CLICKO Terms of Service — Aeroplane Entertainment.">
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#070b16;color:#f1f5f9;line-height:1.7}
+    .wrap{max-width:860px;margin:auto;padding:32px 22px}
+    a{color:#38bdf8}
+    a:hover{color:#7dd3fc}
+    .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:10px}
+    .brand{font-weight:900;font-size:18px;color:#f1f5f9;text-decoration:none}
+    .back{color:#94a3b8;font-size:14px}
+    h1{font-size:38px;letter-spacing:-.04em;margin:0 0 6px}
+    .card{background:#111827;border:1px solid #263449;border-radius:18px;padding:28px;margin-top:24px}
+    p,li{color:#cbd5e1;font-size:15px}
+    .muted{color:#94a3b8;font-size:14px}
+    h2{margin-top:28px;margin-bottom:8px;font-size:18px;color:#f1f5f9}
+    ul{padding-left:20px}
+    footer{border-top:1px solid #1e293b;margin-top:48px;padding:24px 0;color:#64748b;font-size:13px;text-align:center}
+    footer a{color:#64748b}
+    footer a:hover{color:#38bdf8}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="index.html">⚡ CLICKO</a>
+      <a class="back" href="index.html">← Back to Home</a>
+    </div>
 
-## 4. Deployment checklist
+    <h1>Terms of Service</h1>
+    <p class="muted">Effective date: June 12, 2026 · Aeroplane Entertainment</p>
 
-**Extension:** replace `manifest.oauth2.client_id` + `manifest.key`; set Chrome-Extension OAuth Item ID = your extension ID; set `PRICING_URL`, `LEMONSQUEEZY_CHECKOUT_URL`, `LICENSE_SERVER` in `popup/constants.js`; load unpacked / zip & upload.
+    <div class="card">
+      <p>These Terms of Service ("Terms") constitute a legally binding agreement between you and Aeroplane Entertainment ("we", "us", or "our") concerning your access to and use of the CLICKO Chrome extension, CLICKO Cloud AI service, and associated website (collectively, the "Service").</p>
+      <p>By installing the extension or purchasing a subscription, you agree to these Terms.</p>
 
-**Server (Vercel):** env `REDIS_URL` (or `KV_REST_API_URL` + `KV_REST_API_TOKEN`), `ADMIN_SECRET`, `GOOGLE_CLIENT_ID`, `LEMONSQUEEZY_WEBHOOK_SECRET`, `NODE_ENV=production`; deploy; create the Lemon Squeezy webhook → `/api/webhook`.
+      <h2>1. License</h2>
+      <p>CLICKO is sold as a monthly subscription (Basic, Pro, or Ultra tier) linked to the Google account email used during purchase. Each plan grants a monthly pool of AI credits and unlocks Pro features for personal or business use by that account holder. Subscriptions renew automatically each month until cancelled.</p>
+      <p>The free tier is available to all users without payment and includes 500 one-time starter AI credits.</p>
 
-**Clicko Engine providers (all free, no card):** Gemini (aistudio.google.com/apikey), Groq (console.groq.com/keys), Cerebras (cloud.cerebras.ai), OpenRouter (openrouter.ai/keys).
+      <h2>2. Acceptable use</h2>
+      <p>You are solely responsible for how you use automation. You agree NOT to use CLICKO to:</p>
+      <ul>
+        <li>Violate any website's terms of service or applicable laws</li>
+        <li>Bypass security controls, CAPTCHA systems, or anti-abuse mechanisms</li>
+        <li>Scrape, harvest, or collect data in violation of a site's robots.txt or terms</li>
+        <li>Conduct fraud, spam, or any harmful or illegal activity</li>
+        <li>Infringe third-party intellectual property or privacy rights</li>
+      </ul>
+
+      <h2>3. AI credits and CLICKO Cloud</h2>
+      <p>AI credits are consumed when you use the Clicko Engine or AI Recommendations via CLICKO Cloud. 1 credit ≈ $0.001 of AI usage. Credits granted with a subscription never expire and are not transferable. Unused credits are forfeited upon a confirmed refund. Credits have no cash value.</p>
+
+      <h2>4. Payments and subscriptions</h2>
+      <p>Payments are processed by Lemon Squeezy. By subscribing you authorise Lemon Squeezy to charge your payment method monthly until you cancel. License activation requires a successful payment webhook matching your purchase email. See our <a href="refund-policy.html">Refund Policy</a> for cancellation and refund details.</p>
+
+      <h2>5. No guarantee of availability</h2>
+      <p>Websites change frequently. While CLICKO includes selector fallback and smart retries, we cannot guarantee that automations will always work as target pages evolve. CLICKO Cloud AI uptime is provided on a best-effort basis.</p>
+
+      <h2>6. Limitation of liability</h2>
+      <p>THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AEROPLANE ENTERTAINMENT SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES. OUR TOTAL LIABILITY TO YOU SHALL NOT EXCEED THE AMOUNT YOU PAID TO US IN THE 3 MONTHS PRECEDING THE CLAIM.</p>
+
+      <h2>7. Intellectual property</h2>
+      <p>CLICKO and all associated branding, code, and content are the property of Aeroplane Entertainment. You may not reverse-engineer, redistribute, or resell the Service or any part of it without written permission.</p>
+
+      <h2>8. Changes to these Terms</h2>
+      <p>We may update these Terms from time to time. We will notify you of material changes via email or an in-extension notice. Continued use of the Service after changes constitutes acceptance of the updated Terms.</p>
+
+      <h2>9. Governing law</h2>
+      <p>These Terms are governed by applicable law. Any disputes shall be resolved through binding arbitration or in a court of competent jurisdiction.</p>
+
+      <h2>10. Contact</h2>
+      <p>Email: <a href="mailto:support@aeroplaneentertainment.com">support@aeroplaneentertainment.com</a></p>
+    </div>
+
+    <footer>
+      © 2026 CLICKO · Aeroplane Entertainment ·
+      <a href="index.html">Home</a> ·
+      <a href="pricing.html">Pricing</a> ·
+      <a href="privacy-policy.html">Privacy</a> ·
+      <a href="refund-policy.html">Refunds</a>
+    </footer>
+  </div>
+</body>
+</html>
