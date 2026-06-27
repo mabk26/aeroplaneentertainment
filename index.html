@@ -12,35 +12,35 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aeroplaneentertainment.com/">
   <style>
-    :root{--bg:#070b16;--panel:#111827;--panel2:#172033;--text:#f1f5f9;--muted:#94a3b8;--line:#263449;--cyan:#38bdf8;--blue:#818cf8;--green:#34d399;--red:#f87171;--shadow:0 24px 80px rgba(0,0,0,.45)}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 20% -10%,rgba(56,189,248,.24),transparent 34%),radial-gradient(circle at 85% 8%,rgba(129,140,248,.20),transparent 32%),var(--bg);color:var(--text)}
+    :root{--bg-shell:#0b1027;--panel:#111827;--panel2:#172033;--text:#f8fbff;--muted:#9da8c8;--line:#263449;--accent:#7c5cff;--accent-grad:#5b50f0;--accent-2:#42e8ce;--green:#34d399;--red:#f87171;--shadow:0 24px 80px rgba(0,0,0,.45)}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(120% 80% at 0% 0%,rgba(124,92,255,.30),transparent 56%),radial-gradient(110% 90% at 96% 8%,rgba(66,232,206,.20),transparent 58%),radial-gradient(100% 90% at 80% 100%,rgba(236,72,153,.16),transparent 55%),var(--bg-shell);color:var(--text)}
     a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 22px}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
     .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;font-size:20px}
     .links{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 18px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#07111f;box-shadow:0 10px 28px rgba(56,189,248,.25);transition:transform .15s,box-shadow .15s}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(56,189,248,.35)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 18px;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent-grad));color:#fff;box-shadow:0 10px 28px rgba(124,92,255,.25);transition:transform .15s,box-shadow .15s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(124,92,255,.35)}
     .btn.secondary{background:rgba(148,163,184,.08);color:var(--text);box-shadow:none;border:1px solid var(--line)}
     .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:64px 0 74px}
-    .eyebrow{display:inline-flex;border:1px solid rgba(56,189,248,.3);background:rgba(56,189,248,.08);color:var(--cyan);font-weight:800;border-radius:999px;padding:7px 11px;font-size:12px}
+    .eyebrow{display:inline-flex;border:1px solid rgba(124,92,255,.3);background:rgba(124,92,255,.08);color:var(--accent);font-weight:800;border-radius:999px;padding:7px 11px;font-size:12px}
     .hero h1{font-size:58px;line-height:.94;margin:18px 0 18px;letter-spacing:-.07em}
-    .grad{background:linear-gradient(90deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .grad{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
     .lead{font-size:18px;line-height:1.75;color:#cbd5e1;margin:0 0 28px}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
     .note{margin-top:16px;color:var(--muted);font-size:13px}
     /* Mock UI */
     .mock{background:linear-gradient(180deg,rgba(23,32,51,.9),rgba(10,15,28,.92));border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:18px;position:relative;overflow:hidden}
-    .mock:before{content:"";position:absolute;inset:-120px -80px auto auto;width:260px;height:260px;background:rgba(56,189,248,.18);filter:blur(50px);border-radius:50%}
+    .mock:before{content:"";position:absolute;inset:-120px -80px auto auto;width:260px;height:260px;background:rgba(124,92,255,.18);filter:blur(50px);border-radius:50%}
     .panel{position:relative;background:#0f172a;border:1px solid #334155;border-radius:18px;overflow:hidden}
     .panel header{padding:15px;border-bottom:1px solid #334155;display:flex;justify-content:space-between;align-items:center}
     .tabs{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid #334155}
     .tabs span{font-size:11px;color:var(--muted);padding:10px 4px;text-align:center}
-    .tabs span:first-child{color:var(--cyan);border-bottom:2px solid var(--cyan)}
+    .tabs span:first-child{color:var(--accent);border-bottom:2px solid var(--accent)}
     .cards{padding:14px;display:grid;gap:10px}
     .card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:13px;font-size:13px}
     .mini{height:8px;border-radius:8px;background:#334155;margin-top:8px}.mini.w60{width:60%}.mini.w85{width:85%}
     .status{display:flex;gap:8px;padding:14px}
-    .status b{flex:1;text-align:center;border-radius:12px;padding:12px;background:linear-gradient(135deg,var(--green),#10b981);color:#07111f;font-size:13px}
+    .status b{flex:1;text-align:center;border-radius:12px;padding:12px;background:linear-gradient(135deg,var(--green),#10b981);color:#fff;font-size:13px}
     .status b:last-child{background:linear-gradient(135deg,var(--red),#ef4444);color:#fff}
     /* Sections */
     .section{padding:74px 0;border-top:1px solid rgba(148,163,184,.12)}
@@ -52,7 +52,7 @@
     /* Pricing preview */
     .pricebox{max-width:900px;margin:26px auto 0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
     .plan{background:rgba(17,24,39,.82);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column}
-    .plan.pro{border-color:rgba(56,189,248,.7);box-shadow:0 0 32px rgba(56,189,248,.12)}
+    .plan.pro{border-color:rgba(124,92,255,.7);box-shadow:0 0 32px rgba(124,92,255,.12)}
     .plan.free{opacity:.8}
     .price{font-size:40px;font-weight:950;letter-spacing:-.05em;margin:10px 0 4px}
     .price small{font-size:14px;color:var(--muted);font-weight:600}
@@ -62,7 +62,7 @@
     /* CWS badge */
     .cws-wrap{text-align:center;margin:32px 0 0}
     .cws-btn{display:inline-flex;align-items:center;gap:10px;background:#1e293b;border:1px solid var(--line);border-radius:14px;padding:12px 20px;color:var(--text);font-size:14px;font-weight:700;transition:border-color .15s}
-    .cws-btn:hover{border-color:var(--cyan)}
+    .cws-btn:hover{border-color:var(--accent)}
     .footer{border-top:1px solid rgba(148,163,184,.12);padding:28px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     @media(max-width:900px){.hero,.grid{grid-template-columns:1fr}.pricebox{grid-template-columns:1fr 1fr}.hero h1{font-size:44px}.links a:not(.btn){display:none}}
     @media(max-width:560px){.pricebox{grid-template-columns:1fr}}
@@ -83,7 +83,7 @@
 
     <section class="hero">
       <div>
-        <span class="eyebrow">Chrome Extension · Manifest V3 · v1.31.3</span>
+        <span class="eyebrow">Chrome Extension · Manifest V3 · v1.34.1</span>
         <h1>Automate clicks, forms &amp; workflows <span class="grad">on any website.</span></h1>
         <p class="lead">CLICKO combines a visual element picker with a smart rule engine, variables, retry logic, schedules, Shadow DOM search, iframe-aware automation, and an agentic AI engine that works for you.</p>
         <div class="cta">
@@ -96,16 +96,16 @@
         <div class="panel">
           <header>
             <b class="grad" style="font-size:16px;font-weight:900;">CLICKO</b>
-            <span style="font-size:11px;background:#334155;color:#94a3b8;padding:3px 8px;border-radius:6px">FREE</span>
+            <span style="font-size:11px;background:#334155;color:#9da8c8;padding:3px 8px;border-radius:6px">FREE</span>
           </header>
           <div class="tabs">
-            <span style="color:var(--cyan);border-bottom:2px solid var(--cyan)">Run</span>
+            <span style="color:var(--accent);border-bottom:2px solid var(--accent)">Run</span>
             <span>✦ AI</span><span>Advance</span><span>Elements</span><span>Rules</span>
           </div>
           <div class="cards">
             <div class="card"><b>Submit Button</b><div class="mini w85"></div><div class="mini w60"></div></div>
             <div class="card"><b>If error detected → click Retry</b><div class="mini w85"></div></div>
-            <div class="card" style="background:rgba(56,189,248,.08);border-color:rgba(56,189,248,.3)"><b style="color:var(--cyan)">✦ AI Engine: Fill form &amp; submit</b><div class="mini w60" style="background:rgba(56,189,248,.3)"></div></div>
+            <div class="card" style="background:rgba(124,92,255,.08);border-color:rgba(124,92,255,.3)"><b style="color:var(--accent)">✦ AI Engine: Fill form &amp; submit</b><div class="mini w60" style="background:rgba(124,92,255,.3)"></div></div>
           </div>
           <div class="status"><b>▶ START</b><b>■ STOP</b></div>
         </div>
@@ -114,7 +114,7 @@
 
     <div class="cws-wrap">
       <a class="cws-btn" href="https://chrome.google.com/webstore/detail/bohdghgjgkellecnjkmahfiocaefgbki" target="_blank" rel="noopener">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="#38bdf8"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#7c5cff" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="#7c5cff"/></svg>
         Install free on Chrome Web Store
       </a>
     </div>
@@ -167,10 +167,10 @@
           <a class="btn secondary" style="width:100%;justify-content:center" href="pricing.html">Choose Basic</a>
         </div>
         <div class="plan pro">
-          <h3>Pro <span style="font-size:10px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;padding:2px 8px;border-radius:999px;font-weight:900;vertical-align:middle">POPULAR</span></h3>
+          <h3>Pro <span style="font-size:10px;background:linear-gradient(135deg,var(--accent),var(--accent-grad));color:#fff;padding:2px 8px;border-radius:999px;font-weight:900;vertical-align:middle">POPULAR</span></h3>
           <div class="price">$24 <small>/mo</small></div>
           <ul>
-            <li>30,000 credits / month</li>
+            <li>20,000 credits / month</li>
             <li>Everything in Basic</li>
             <li>Priority model routing</li>
             <li>Share codes</li>
@@ -178,7 +178,7 @@
           <a class="btn" style="width:100%;justify-content:center" href="pricing.html">Choose Pro</a>
         </div>
       </div>
-      <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:18px">Credits are spent per AI action at real token cost + 25%. They never expire and refill each month. <a href="pricing.html" style="color:var(--cyan)">See all plans →</a></p>
+      <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:18px">Credits are spent per AI action at real token cost + 25%. They never expire and refill each month. <a href="pricing.html" style="color:var(--accent)">See all plans →</a></p>
     </div>
   </section>
 

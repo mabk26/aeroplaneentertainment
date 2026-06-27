@@ -7,9 +7,9 @@
   <title>CLICKO Pricing — Basic · Pro · Ultra</title>
   <meta name="description" content="CLICKO plans start at $12/mo. Basic, Pro, and Ultra monthly subscriptions with AI credits that never expire.">
   <style>
-    :root{--bg:#070b16;--panel:#111827;--panel2:#172033;--text:#f1f5f9;--muted:#94a3b8;--line:#263449;--cyan:#38bdf8;--blue:#818cf8;--green:#34d399;--red:#f87171}
+    :root{--bg-shell:#0b1027;--panel:#111827;--panel2:#172033;--text:#f8fbff;--muted:#9da8c8;--line:#263449;--accent:#7c5cff;--accent-grad:#5b50f0;--accent-2:#42e8ce;--green:#34d399;--red:#f87171}
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 50% -10%,rgba(56,189,248,.22),transparent 36%),#070b16;color:var(--text)}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(120% 80% at 0% 0%,rgba(124,92,255,.28),transparent 56%),radial-gradient(110% 90% at 96% 8%,rgba(66,232,206,.18),transparent 58%),#0b1027;color:var(--text)}
     a{text-decoration:none;color:inherit}
     .wrap{max-width:1080px;margin:auto;padding:0 22px}
     .nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
@@ -18,14 +18,14 @@
     .hero{text-align:center;padding:44px 0 28px}
     .hero h1{font-size:44px;letter-spacing:-.06em;margin:12px 0}
     .hero p{color:var(--muted);font-size:17px;line-height:1.7;max-width:620px;margin:0 auto}
-    .emailbox{display:inline-flex;margin-top:12px;border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);color:#bae6fd;border-radius:999px;padding:8px 12px;font-size:13px}
+    .emailbox{display:inline-flex;margin-top:12px;border:1px solid rgba(124,92,255,.28);background:rgba(124,92,255,.08);color:#bae6fd;border-radius:999px;padding:8px 12px;font-size:13px}
     .badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#334155;color:#cbd5e1;font-size:11px;font-weight:900;letter-spacing:.04em}
-    .badge.pro{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f}
+    .badge.pro{background:linear-gradient(135deg,var(--accent),var(--accent-grad));color:#fff}
     /* Plans grid */
     .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0 20px}
     .plan{background:rgba(17,24,39,.84);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 18px 60px rgba(0,0,0,.32);display:flex;flex-direction:column;position:relative;overflow:hidden}
-    .plan.pro{border-color:rgba(56,189,248,.75)}
-    .plan.pro:before{content:"POPULAR";position:absolute;top:16px;right:-34px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;font-size:10px;font-weight:900;letter-spacing:.08em;padding:6px 40px;transform:rotate(35deg)}
+    .plan.pro{border-color:rgba(124,92,255,.75)}
+    .plan.pro:before{content:"POPULAR";position:absolute;top:16px;right:-34px;background:linear-gradient(135deg,var(--accent),var(--accent-grad));color:#fff;font-size:10px;font-weight:900;letter-spacing:.08em;padding:6px 40px;transform:rotate(35deg)}
     .plan h3{margin:0 0 2px;font-size:16px;font-weight:800}
     .price{font-size:40px;font-weight:950;letter-spacing:-.05em;margin:12px 0 2px}
     .price small{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:0}
@@ -35,12 +35,12 @@
     .features li:before{content:"✓";color:var(--green);font-weight:900;flex-shrink:0}
     .features .off{color:#64748b;text-decoration:line-through}
     .features .off:before{content:"×";color:#64748b}
-    .credit-note{font-size:12px;color:var(--cyan);font-weight:700;margin:0 0 14px}
-    .btn{display:flex;width:100%;justify-content:center;align-items:center;border:0;border-radius:14px;padding:13px 16px;font-weight:900;font-size:14px;cursor:pointer;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;box-shadow:0 10px 28px rgba(56,189,248,.22);margin-top:auto;transition:transform .15s,box-shadow .15s;font-family:inherit}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(56,189,248,.35)}
-    .btn.disabled{background:#334155;color:#94a3b8;box-shadow:none;cursor:default}
+    .credit-note{font-size:12px;color:var(--accent);font-weight:700;margin:0 0 14px}
+    .btn{display:flex;width:100%;justify-content:center;align-items:center;border:0;border-radius:14px;padding:13px 16px;font-weight:900;font-size:14px;cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent-grad));color:#fff;box-shadow:0 10px 28px rgba(124,92,255,.22);margin-top:auto;transition:transform .15s,box-shadow .15s;font-family:inherit}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(124,92,255,.35)}
+    .btn.disabled{background:#334155;color:#9da8c8;box-shadow:none;cursor:default}
     .btn.outline{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}
-    .btn.outline:hover{border-color:var(--cyan);transform:translateY(-1px)}
+    .btn.outline:hover{border-color:var(--accent);transform:translateY(-1px)}
     .hint{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5}
     /* FAQ */
     .faq{padding:18px 0 64px}
@@ -54,7 +54,7 @@
     .toast.show{transform:translate(-50%,0)}
     footer{border-top:1px solid rgba(148,163,184,.12);padding:26px 0;color:var(--muted);font-size:13px;text-align:center}
     footer a{color:var(--muted)}
-    footer a:hover{color:var(--cyan)}
+    footer a:hover{color:var(--accent)}
     @media(max-width:980px){.plans{grid-template-columns:1fr 1fr}}
     @media(max-width:560px){.plans{grid-template-columns:1fr}.hero h1{font-size:34px}}
   </style>
@@ -118,10 +118,10 @@
         <h3>Pro</h3>
         <div class="price">$24 <small>/month</small></div>
         <p class="desc">Best value for most users.</p>
-        <div class="credit-note">30,000 credits / month</div>
+        <div class="credit-note">20,000 credits / month</div>
         <ul class="features">
           <li>Everything in Basic</li>
-          <li>2.5× more monthly credits</li>
+          <li>~1.7× more monthly credits</li>
           <li>Priority model routing</li>
           <li>Share codes</li>
           <li>Training files (PDF/CSV/TXT)</li>
@@ -134,10 +134,10 @@
         <h3>Ultra</h3>
         <div class="price">$49 <small>/month</small></div>
         <p class="desc">Heavy, daily automation.</p>
-        <div class="credit-note">75,000 credits / month</div>
+        <div class="credit-note">40,000 credits / month</div>
         <ul class="features">
           <li>Everything in Pro</li>
-          <li>2.5× more monthly credits</li>
+          <li>2× more monthly credits</li>
           <li>Highest priority routing</li>
           <li>Priority support</li>
         </ul>
@@ -169,7 +169,7 @@
       </div>
       <div class="item">
         <b>Can I cancel anytime?</b>
-        <p>Yes. Cancel anytime from the Lemon Squeezy customer portal. You keep Pro access until the end of your billing period. We also offer a 14-day money-back guarantee — see our <a href="refund-policy.html" style="color:var(--cyan)">Refund Policy</a>.</p>
+        <p>Yes. Cancel anytime from the Lemon Squeezy customer portal. You keep Pro access until the end of your billing period. We also offer a 14-day money-back guarantee — see our <a href="refund-policy.html" style="color:var(--accent)">Refund Policy</a>.</p>
       </div>
       <div class="item">
         <b>Do I need my own AI API key?</b>
